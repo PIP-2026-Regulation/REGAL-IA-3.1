@@ -1,0 +1,24 @@
+# Core ML/NLP
+torch==2.2.2
+sentence-transformers==2.7.0
+scikit-learn==1.4.2
+numpy==1.26.4
+
+# Document Processing
+pypdf==4.2.0
+
+# Web Interface (Legacy - use React frontend instead)
+# gradio==4.31.0
+
+# API Backend
+fastapi==0.110.0
+uvicorn[standard]==0.27.1
+pydantic==2.6.3
+
+# HTTP & Environment
+requests==2.31.0
+python-dotenv==1.0.1
+
+# Optional: For CPU-only torch (uncomment and replace torch above)
+# --extra-index-url https://download.pytorch.org/whl/cpu
+# torch==2.2.2+cpu

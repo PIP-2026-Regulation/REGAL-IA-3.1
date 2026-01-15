@@ -1,0 +1,226 @@
+.cover-page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+}
+
+.dark-mode .cover-page {
+  background-color: var(--dark-bg);
+}
+
+.cover-content {
+  max-width: 900px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cover-logo {
+  display: flex;
+  align-items: center;
+}
+
+.cover-logo-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.cover-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark-mode .cover-title {
+  background: linear-gradient(135deg, var(--primary-light) 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cover-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  font-weight: 500;
+}
+
+.dark-mode .cover-subtitle {
+  color: var(--dark-text-secondary);
+}
+
+.guidelines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.guideline-card {
+  background-color: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.2s;
+  cursor: default;
+}
+
+.dark-mode .guideline-card {
+  background-color: var(--dark-surface);
+  border-color: var(--dark-border);
+}
+
+.guideline-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.dark-mode .guideline-card:hover {
+  border-color: var(--primary-light);
+}
+
+.guideline-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0, 51, 153, 0.1) 0%, rgba(0, 85, 204, 0.1) 100%);
+  border-radius: 10px;
+}
+
+.dark-mode .guideline-icon {
+  background: linear-gradient(135deg, rgba(0, 85, 204, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%);
+}
+
+.guideline-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.guideline-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+
+.dark-mode .guideline-title {
+  color: var(--dark-text-primary);
+}
+
+.guideline-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.dark-mode .guideline-description {
+  color: var(--dark-text-secondary);
+}
+
+.cover-footer {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.dark-mode .cover-footer {
+  color: var(--dark-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cover-title {
+    font-size: 2rem;
+  }
+
+  .cover-subtitle {
+    font-size: 1rem;
+  }
+
+  .guidelines-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .guideline-card {
+    padding: 1rem;
+  }
+
+  .guideline-icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Scrollbar */
+.cover-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cover-page::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+.dark-mode .cover-page::-webkit-scrollbar-track {
+  background: var(--dark-bg);
+}
+
+.cover-page::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.dark-mode .cover-page::-webkit-scrollbar-thumb {
+  background: var(--dark-border);
+}
+
+.cover-page::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+.dark-mode .cover-page::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}

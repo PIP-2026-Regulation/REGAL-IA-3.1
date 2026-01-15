@@ -1,0 +1,563 @@
+{
+  "document_title": "Questions",
+  "type_1": {
+    "name": "Generative AI & GPAI",
+    "description": "LLMs, Diffusion Models, Chatbots",
+    "focus": [
+      "Copyright",
+      "Transparency",
+      "Systemic Risk"
+    ],
+    "A_compliance_and_legal": [
+      {
+        "id": 1,
+        "question": "Has the model provider published a copyright compliance policy?",
+        "reference": "Art. 53(1)(c)"
+      },
+      {
+        "id": 2,
+        "question": "Have you verified whether the model was trained on data subject to a text and data mining opt-out?",
+        "reference": "Art. 53(1)(c) / EU Directive 2019/790"
+      },
+      {
+        "id": 3,
+        "question": "Does the system clearly disclose to end users that they are interacting with a machine?",
+        "reference": "Art. 50(1)"
+      },
+      {
+        "id": 4,
+        "question": "Is generated content (text/image) technically marked as artificial (e.g. invisible watermarking)?",
+        "reference": "Art. 50(2)"
+      },
+      {
+        "id": 5,
+        "question": "Is generated content visibly labelled as artificial?",
+        "reference": "Art. 50(4)"
+      },
+      {
+        "id": 6,
+        "question": "Has the provider published a detailed summary of the model’s training data?",
+        "reference": "Art. 53(1)(d)"
+      },
+      {
+        "id": 7,
+        "question": "Does the model comply with the EU Copyright Directive, even if trained outside the EU?",
+        "reference": "Art. 53(1)(c)"
+      },
+      {
+        "id": 8,
+        "question": "Have you conducted a Data Protection Impact Assessment (DPIA) prior to deployment?",
+        "reference": "GDPR Art. 35 / AI Act Art. 27"
+      },
+      {
+        "id": 9,
+        "question": "Does the model exceed 10^25 FLOPs (presumption of systemic risk)?",
+        "reference": "Art. 51(2)"
+      },
+      {
+        "id": 10,
+        "question": "If systemic risk applies, has the model been notified to the AI Office?",
+        "reference": "Art. 52(1)"
+      },
+      {
+        "id": 11,
+        "question": "Do the terms of use explicitly prohibit illegal content generation (CSAM, terrorism)?",
+        "reference": "Art. 51(1) – Systemic risks"
+      },
+      {
+        "id": 12,
+        "question": "Does the model comply with GDPR “Right to be Forgotten” requirements within its neural weights?",
+        "reference": "GDPR Art. 17 / AI Act Art. 2(7)"
+      }
+    ],
+    "B_robustness_and_security": [
+      {
+        "id": 1,
+        "question": "Is the system protected against prompt injection attacks?",
+        "reference": "Art. 15(4) / Art. 55(1)(b)"
+      },
+      {
+        "id": 2,
+        "question": "Have you tested jailbreak attacks (e.g. DAN, developer mode)?",
+        "reference": "Art. 55(1)(b)"
+      },
+      {
+        "id": 3,
+        "question": "Is the model resilient to data poisoning attacks?",
+        "reference": "Art. 15(4)"
+      },
+      {
+        "id": 4,
+        "question": "Does the system filter personal data (PII) on input before processing?",
+        "reference": "Art. 10 / GDPR"
+      },
+      {
+        "id": 5,
+        "question": "Does the system filter personal data on output before display?",
+        "reference": "GDPR Art. 25 – Privacy by Design"
+      },
+      {
+        "id": 6,
+        "question": "Is there a moderation mechanism to block hate speech?",
+        "reference": "Art. 55(1) – Risk mitigation"
+      },
+      {
+        "id": 7,
+        "question": "Are malicious prompt injection attempts logged for analysis?",
+        "reference": "Art. 19 – Logging"
+      },
+      {
+        "id": 8,
+        "question": "Have you evaluated resilience against adversarial or contradictory inputs?",
+        "reference": "Art. 15(4)"
+      },
+      {
+        "id": 9,
+        "question": "Can the system be stopped in case of uncontrolled behavior (kill switch)?",
+        "reference": "Art. 14(4)(e)"
+      }
+    ],
+    "C_reliability_and_hallucinations": [
+      {
+        "id": 1,
+        "question": "Do you use RAG (Retrieval-Augmented Generation) to ground responses?",
+        "reference": "Art. 15(1) – Accuracy"
+      },
+      {
+        "id": 2,
+        "question": "Does the system provide the exact sources used to generate a response?",
+        "reference": "Art. 50 – Transparency"
+      },
+      {
+        "id": 3,
+        "question": "Have you measured hallucination rates on a reference test set?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 4,
+        "question": "Does the system refuse to answer when it lacks information?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 5,
+        "question": "Is there a disclaimer warning users about the risk of errors?",
+        "reference": "Art. 50(2)"
+      },
+      {
+        "id": 6,
+        "question": "Can the model explicitly say “I don’t know”?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 7,
+        "question": "Have you tested the model on EU-specific legal knowledge?",
+        "reference": "Art. 10 – Data quality"
+      }
+    ],
+    "D_governance_and_audit": [
+      {
+        "id": 1,
+        "question": "Are conversation logs retained for at least 6 months?",
+        "reference": "Art. 19 / Art. 26(6)"
+      },
+      {
+        "id": 2,
+        "question": "Are logs encrypted at rest?",
+        "reference": "Art. 15(1) – Cybersecurity"
+      },
+      {
+        "id": 3,
+        "question": "Is access to logs restricted (RBAC)?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 4,
+        "question": "Have you documented the system prompt used to align the model?",
+        "reference": "Annex IV, 2(b)"
+      },
+      {
+        "id": 5,
+        "question": "Does the system use an LLM-as-a-judge to evaluate its own responses?",
+        "reference": "Art. 15 – Performance measurement"
+      },
+      {
+        "id": 6,
+        "question": "Do you measure energy cost per request?",
+        "reference": "Art. 53(1)(a) / Annex XII"
+      }
+    ]
+  },
+  "type_2": {
+    "name": "Decisional / Supervised AI",
+    "risk_level": "High Risk",
+    "focus": [
+      "Bias",
+      "Explainability",
+      "Performance",
+      "Human-in-the-Loop"
+    ],
+    "A_classification_and_high_risk": [
+      {
+        "id": 1,
+        "question": "Is the system used for recruitment or personnel selection?",
+        "reference": "Annex III, pt. 4"
+      },
+      {
+        "id": 2,
+        "question": "Does the system assess creditworthiness or credit scoring?",
+        "reference": "Annex III, pt. 5(b)"
+      },
+      {
+        "id": 3,
+        "question": "Does the system determine access to education or training?",
+        "reference": "Annex III, pt. 3"
+      },
+      {
+        "id": 4,
+        "question": "Is the system a safety component of a critical product?",
+        "reference": "Art. 6(1) / Annex I"
+      },
+      {
+        "id": 5,
+        "question": "Is the system used by law enforcement for risk assessment?",
+        "reference": "Annex III, pt. 6"
+      },
+      {
+        "id": 6,
+        "question": "Does the system manage access to essential public services?",
+        "reference": "Annex III, pt. 5"
+      },
+      {
+        "id": 7,
+        "question": "Is the system used to grant life or health insurance policies?",
+        "reference": "Annex III, pt. 5(c)"
+      },
+      {
+        "id": 8,
+        "question": "Is the system used for migration or asylum management?",
+        "reference": "Annex III, pt. 7"
+      },
+      {
+        "id": 9,
+        "question": "Does the system perform a purely procedural task (exception)?",
+        "reference": "Art. 6(3)"
+      },
+      {
+        "id": 10,
+        "question": "Have you registered the system in the EU high-risk AI database?",
+        "reference": "Art. 49 / Art. 71"
+      }
+    ],
+    "B_data_and_bias": [
+      {
+        "id": 1,
+        "question": "Have you tested training data for gender bias?",
+        "reference": "Art. 10(2)(f)"
+      },
+      {
+        "id": 2,
+        "question": "Have you tested training data for racial or ethnic bias?",
+        "reference": "Art. 10(2)(f)"
+      },
+      {
+        "id": 3,
+        "question": "Have you tested data for geographic bias?",
+        "reference": "Art. 10(2)(f)"
+      },
+      {
+        "id": 4,
+        "question": "Are training/validation/test datasets strictly separated?",
+        "reference": "Art. 10(3)"
+      },
+      {
+        "id": 5,
+        "question": "Have you documented data provenance (data lineage)?",
+        "reference": "Art. 10(2)(a)"
+      },
+      {
+        "id": 6,
+        "question": "Have you used sensitive data for bias detection (under permitted conditions)?",
+        "reference": "Art. 10(5)"
+      },
+      {
+        "id": 7,
+        "question": "Were sensitive data deleted after bias analysis?",
+        "reference": "Art. 10(5)(e)"
+      },
+      {
+        "id": 8,
+        "question": "Is the dataset up to date with current reality?",
+        "reference": "Art. 10(3)"
+      },
+      {
+        "id": 9,
+        "question": "Have you identified spurious correlations?",
+        "reference": "Art. 10(2)(f)"
+      }
+    ],
+    "C_explainability_and_transparency": [
+      {
+        "id": 1,
+        "question": "Does the system provide feature importance (e.g. SHAP) for each decision?",
+        "reference": "Art. 13(1)"
+      },
+      {
+        "id": 2,
+        "question": "Does the system provide human-understandable reason codes?",
+        "reference": "Art. 13(1)"
+      },
+      {
+        "id": 3,
+        "question": "Can you explain why a specific decision was made for a given individual?",
+        "reference": "Art. 13(1)"
+      },
+      {
+        "id": 4,
+        "question": "Does the user documentation explain the model’s mathematical limitations?",
+        "reference": "Art. 13(3)(b)"
+      },
+      {
+        "id": 5,
+        "question": "Are users informed that the decision is AI-assisted?",
+        "reference": "Art. 13(2)"
+      },
+      {
+        "id": 6,
+        "question": "Is there a procedure to contest the decision?",
+        "reference": "Art. 86 – Right to explanation"
+      },
+      {
+        "id": 7,
+        "question": "Is the model a total “black box”?",
+        "reference": "Art. 13 – Potential conflict"
+      }
+    ],
+    "D_human_oversight": [
+      {
+        "id": 1,
+        "question": "Is there a human-in-the-loop validating decisions?",
+        "reference": "Art. 14(1)"
+      },
+      {
+        "id": 2,
+        "question": "Can the human override the AI decision?",
+        "reference": "Art. 14(4)(b)"
+      },
+      {
+        "id": 3,
+        "question": "Does the human have sufficient technical competence?",
+        "reference": "Art. 14(4)(a)"
+      },
+      {
+        "id": 4,
+        "question": "Have supervisors been trained on automation bias?",
+        "reference": "Art. 14(4)(b)"
+      },
+      {
+        "id": 5,
+        "question": "Is there a confidence threshold below which AI defers to humans?",
+        "reference": "Art. 14(2)"
+      },
+      {
+        "id": 6,
+        "question": "Are human overrides logged?",
+        "reference": "Art. 19"
+      },
+      {
+        "id": 7,
+        "question": "Can the supervisor stop the system in case of malfunction?",
+        "reference": "Art. 14(4)(e)"
+      }
+    ],
+    "E_performance_and_technical": [
+      {
+        "id": 1,
+        "question": "What is the primary metric (Accuracy, F1-score, ROC-AUC)?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 2,
+        "question": "Is there a minimum performance threshold for deployment?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 3,
+        "question": "Is worst-case performance measured?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 4,
+        "question": "Does the system detect data drift in production?",
+        "reference": "Art. 15 / Art. 72"
+      },
+      {
+        "id": 5,
+        "question": "Is there an automatic retraining process?",
+        "reference": "Art. 72 – Post-market monitoring"
+      }
+    ]
+  },
+
+  "type_3": {
+    "name": "Biometric AI & Computer Vision",
+    "focus": [
+      "Prohibitions",
+      "GDPR",
+      "Surveillance"
+    ],
+    "A_prohibited_practices": [
+      {
+        "id": 1,
+        "question": "Does the system perform real-time remote biometric identification?",
+        "reference": "Art. 5(1)(h)"
+      },
+      {
+        "id": 2,
+        "question": "Is the system used in publicly accessible spaces?",
+        "reference": "Art. 5(1)(h)"
+      },
+      {
+        "id": 3,
+        "question": "Is the system used by law enforcement (except for serious crime exceptions)?",
+        "reference": "Art. 5(1)(h)"
+      },
+      {
+        "id": 4,
+        "question": "Does the system classify individuals by race or ethnicity?",
+        "reference": "Art. 5(1)(g)"
+      },
+      {
+        "id": 5,
+        "question": "By political or religious opinions?",
+        "reference": "Art. 5(1)(g)"
+      },
+      {
+        "id": 6,
+        "question": "By sexual orientation?",
+        "reference": "Art. 5(1)(g)"
+      },
+      {
+        "id": 7,
+        "question": "Does the system perform emotion recognition?",
+        "reference": "Art. 5(1)(f)"
+      },
+      {
+        "id": 8,
+        "question": "If yes, is it used in professional or educational settings (prohibited)?",
+        "reference": "Art. 5(1)(f)"
+      },
+      {
+        "id": 9,
+        "question": "Was the database created via internet scraping (e.g. Clearview AI)?",
+        "reference": "Art. 5(1)(e)"
+      },
+      {
+        "id": 10,
+        "question": "Is the system used for predictive policing?",
+        "reference": "Art. 5(1)(d)"
+      }
+    ],
+    "B_authorized_vs_risky_use_cases": [
+      {
+        "id": 1,
+        "question": "Is the system used solely for authentication (1:1)?",
+        "reference": "Recital 15 – Excluded from high risk"
+      },
+      {
+        "id": 2,
+        "question": "Is the system used for identification (1:N)?",
+        "reference": "Annex III, pt. 1 – High risk"
+      },
+      {
+        "id": 3,
+        "question": "Does it detect driver fatigue or distraction?",
+        "reference": "Road safety exception – Art. 5(1)(f)"
+      }
+    ],
+    "C_biometric_data_and_privacy": [
+      {
+        "id": 1,
+        "question": "Are biometric templates stored in encrypted form?",
+        "reference": "GDPR Art. 32 / Art. 15(1)"
+      },
+      {
+        "id": 2,
+        "question": "Was explicit consent obtained for biometric data collection?",
+        "reference": "GDPR Art. 9 / AI Act Art. 2(7)"
+      },
+      {
+        "id": 3,
+        "question": "Are individuals informed via clear signage?",
+        "reference": "Art. 50(1)"
+      }
+    ],
+    "D_technical_and_audit": [
+      {
+        "id": 1,
+        "question": "What is the false positive rate (FPR)?",
+        "reference": "Art. 15(1) – Accuracy"
+      },
+      {
+        "id": 2,
+        "question": "Has the decision threshold been calibrated to minimize critical false positives?",
+        "reference": "Art. 15(1)"
+      },
+      {
+        "id": 3,
+        "question": "Is the system protected against adversarial image attacks?",
+        "reference": "Art. 15(4)"
+      }
+    ]
+  },
+
+  "type_4": {
+    "name": "Unsupervised / Reinforcement AI",
+    "focus": "Robustness and ethics of complex systems",
+    "unsupervised_and_reinforcement_learning": [
+      {
+        "id": 1,
+        "question": "Can the system explain why data were clustered together?",
+        "reference": "Art. 13 – Interpretability"
+      },
+      {
+        "id": 2,
+        "question": "Is the reward function aligned with ethical constraints?",
+        "reference": "Art. 15(3) – Technical safety"
+      },
+      {
+        "id": 3,
+        "question": "Can the system exploit (“hack”) its reward function?",
+        "reference": "Art. 15(3)"
+      },
+      {
+        "id": 4,
+        "question": "Is RL exploration constrained to prevent catastrophic actions?",
+        "reference": "Art. 15(3)"
+      }
+    ],
+    "recommendation_systems_large_platforms": [
+      {
+        "id": 1,
+        "question": "Does the system optimize engagement at the expense of well-being (addiction)?",
+        "reference": "DSA / Art. 5(1)(a) – Subliminal techniques"
+      },
+      {
+        "id": 2,
+        "question": "Does it promote polarizing or disinformation content?",
+        "reference": "Art. 51 / DSA – Systemic risks"
+      }
+    ],
+    "embedded_ai_edge_ai": [
+      {
+        "id": 1,
+        "question": "Has model quantization reduced accuracy compared to server models?",
+        "reference": "Art. 15(1) – Maintained accuracy"
+      },
+      {
+        "id": 2,
+        "question": "Do personal data remain on-device (privacy by design)?",
+        "reference": "GDPR Art. 25"
+      }
+    ]
+  }
+}
