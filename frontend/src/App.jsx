@@ -37,6 +37,7 @@ function App() {
   const [typingMessageIndex, setTypingMessageIndex] = useState(null)
   const messagesEndRef = useRef(null)
   const chatMenuRef = useRef(null)
+  const textareaRef = useRef(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -158,6 +159,11 @@ function App() {
 
     const userMessage = inputValue.trim()
     setInputValue('')
+
+    // Reset textarea height immediately
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'
+    }
 
     const newMessages = [...messages, {
       role: 'user',
@@ -440,12 +446,15 @@ function App() {
               <div className="input-wrapper">
                 <form onSubmit={sendMessage} className="input-container">
                   <textarea
+                    ref={textareaRef}
                     value={inputValue}
                     onChange={(e) => {
                       setInputValue(e.target.value)
                       e.target.style.height = 'auto'
                       if (e.target.value.trim()) {
                         e.target.style.height = e.target.scrollHeight + 'px'
+                      } else {
+                        e.target.style.height = 'auto'
                       }
                     }}
                     onKeyPress={handleKeyPress}

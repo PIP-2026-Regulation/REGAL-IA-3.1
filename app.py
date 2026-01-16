@@ -115,7 +115,12 @@ with gr.Blocks(title="EU AI Act Compliance Advisor") as demo:
     gr.Markdown(f"**🤖 Assistant:**\n\n{get_initial_prompt()}")
 
     chatbot = gr.Chatbot(height=400)
-    msg = gr.Textbox(placeholder="Describe your AI system here...", show_label=False)
+    msg = gr.Textbox(
+        placeholder="Describe your AI system here...",
+        show_label=False,
+        lines=1,
+        max_lines=10
+    )
 
     msg.submit(respond, [msg, chatbot], [msg, chatbot])
 
